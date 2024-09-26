@@ -1,3 +1,9 @@
 from django.shortcuts import render
+from django.http import HttpResponse
 
 # Create your views here.
+def index(request):
+    return HttpResponse("Bienvenue dans l'inventaire !")
+
+def add_item(request):
+    return HttpResponse("Ajouter un nouvel élément à l'inventaire.")
