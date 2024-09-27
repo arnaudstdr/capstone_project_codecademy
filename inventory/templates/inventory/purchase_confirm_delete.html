@@ -1,0 +1,7 @@
+<h1>Supprimer l'achat</h1>
+<p>Es-tu sûr de vouloir supprimer cet achat de {{ object.menu_item.title }} ?</p>
+<form method="post">
+    {% csrf_token %}
+    <button type="submit">Supprimer</button>
+</form>
+<a href="{% url 'purchase-list' %}">Annuler</a>

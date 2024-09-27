@@ -1,0 +1,16 @@
+{% extends 'inventory/base.html' %}
+
+{% block title %}Accueil{% endblock %}
+<body>
+    {% block content%}
+    <h2>Plats</h2>
+    <a href="{% url 'index' %}">Retour à l'accueil</a>
+    <ul>
+        {% for item in menuitem %}
+        <li>{{ item.title }} - {{ item.price }} €</li>
+        {% endfor %}
+    </ul>
+
+    <a href="{% url 'menuitem-create' %}">Ajouter un nouveau plat</a>
+    {% endblock %}
+</body>

@@ -1,0 +1,21 @@
+
+    {% extends 'inventory/base.html' %}
+
+    {% block title %}Accueil{% endblock %}
+
+<body>
+    {% block content%}
+    <h2>Bienvenue dans le système de gestion d'inventaire du restaurant</h2>
+    <p>Utilisez le menu ci-dessus pour gérer les ingrédients, les recettes et les achats.</p>
+    
+    <nav>
+        <ul>
+            <li><a href="{% url 'ingredient-list' %}" class="liste">Voir les Ingrédients</a></li>
+            <li><a href="{% url 'menuitem-list' %}" class="liste">Voir les Menus</a></li>
+            <li><a href="{% url 'purchase-list' %}" class="liste">Voir les Achats</a></li>
+            <li><a href="{% url 'totals' %}" class="liste">Voir les Totaux</a></li>
+        </ul>
+    </nav>
+    
+    {% endblock %}
+</body>

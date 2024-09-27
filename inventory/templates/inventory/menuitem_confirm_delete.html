@@ -1,0 +1,7 @@
+<h1>Supprimer le menu</h1>
+<p>Es-tu sûr de vouloir supprimer {{ object.name }} ?</p>
+<form method="post">
+    {% csrf_token %}
+    <button type="submit">Supprimer</button>
+</form>
+<a href="{% url 'menuitem-list' %}">Annuler</a>

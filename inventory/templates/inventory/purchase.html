@@ -1,0 +1,17 @@
+
+{% extends 'inventory/base.html' %}
+
+{% block title %}Accueil{% endblock %}
+<body>
+    {% block content%}
+    <h2>Achats</h2>
+    <a href="{% url 'index' %}">Retour à l'accueil</a>
+    <ul>
+        {% for purchase in purchases %}
+        <li>{{ purchase.menu_item }} - {{ purchase.timestamp }}</li>
+        {% endfor %}
+    </ul>
+
+    <a href="{% url 'purchase-create' %}">Enregistrer un nouvel achat</a>
+    {% endblock %}
+</body>

@@ -1,0 +1,13 @@
+{% extends 'inventory/base.html' %}
+
+{% block title %}Accueil{% endblock %}
+<body>
+    {% block content%}
+    <h2>Totaux du Restaurant</h2>
+    <a href="{% url 'index' %}">Retour à l'accueil</a>
+    
+    <p><strong>Revenu total : </strong>{{ total_revenue }} €</p>
+    <p><strong>Coût total : </strong>{{ total_cost }} €</p>
+    <p><strong>Profit total : </strong>{{ total_profit }} €</p>
+    {% endblock %}
+</body>

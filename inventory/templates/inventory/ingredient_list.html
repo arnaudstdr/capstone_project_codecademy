@@ -1,0 +1,16 @@
+{% extends 'inventory/base.html' %}
+
+{% block title %}Accueil{% endblock %}
+<body>
+    {% block content%}
+    <h2>Ingrédients</h2>
+    <a href="{% url 'index' %}">Retour à l'accueil</a>
+    <ul>
+        {% for ingredient in ingredients %}
+        <li>{{ ingredient.name }} - {{ ingredient.quantity }} {{ ingredient.unit }}</li>
+        {% endfor %}
+    </ul>
+
+    <a href="{% url 'ingredient-create' %}">Ajouter un nouvel ingrédient</a>
+    {% endblock %}
+</body>

@@ -31,4 +31,4 @@ class Purchase(models.Model):
     timestamp = models.DateTimeField(auto_now=True)
 
     def __str__(self):
-        return f"Achat de {self.menu_item} à {self.timestamp}."
+        return f"Achat de {self.menu_item.title} à {self.timestamp}."

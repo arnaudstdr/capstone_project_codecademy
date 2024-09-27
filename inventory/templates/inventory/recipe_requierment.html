@@ -1,0 +1,9 @@
+<h1>Exigences des Recettes</h1>
+<a href="{% url 'index' %}">Retour à l'accueil</a>
+<ul>
+    {% for recipe in recipe_requirements %}
+    <li>{{ recipe.menu_item.title }} nécessite {{ recipe.quantity }} {{ recipe.ingredient.unit }} de {{ recipe.ingredient.name }}</li>
+    {% endfor %}
+</ul>
+
+<a href="{% url 'reciperequirment-create' %}">Ajouter une nouvelle exigence de recette</a>
